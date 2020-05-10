@@ -17,12 +17,12 @@ int main() {
     // wylicza najkrótsze ścieżki i zapisuje wyniki
     // do pliku test2.txt
 
-    int startVert = 0;
+    int startVert ;//= 0// jezeli tworzenie losowego grafu
     listOfN::graph<int,int> graf1;
     //graf1 = listOfN::generateGraph(250,100); //tworzenie losowego grafu (ilosc wierzcholkow,gestosc)
+    //losowy graf z macierzy listOfN zmienic na matrixOfN
     if(loadGraph("graf.txt",graf1,startVert))
     {
-
         listOfN::BellmanFordDistances(graf1,startVert,"test2.txt");
     }
 
